@@ -83,14 +83,22 @@ You should see: `nothing to commit, working tree clean`
 
  The starter code as a ZIP or via a shared GitHub link.
 
-**shares a ZIP:**
+**Option A — Trainer shares a ZIP:**
 ```
 1. Extract the ZIP to your Desktop
 2. Copy all files from the extracted folder into ai-intake-cop\
 3. Do NOT overwrite the .git folder
 ```
 
-After, verify:
+**Option B — Trainer shares a GitHub URL:**
+```bash
+# Add the starter as a remote, then pull
+git remote add starter https://github.com/TRAINER-USERNAME/ai-intake-cop-starter.git
+git fetch starter
+git checkout -b main starter/main
+```
+
+After either option, verify:
 ```bash
 ls          # (Git Bash) or dir (Command Prompt)
 # You should see: main.py  requirements.txt  docker-compose.yml  01-guardrails/  etc.
